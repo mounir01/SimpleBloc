@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Simple Blog</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="@Url.RouteUrl("Home")">Simple Bar</a>
+        </h1>
+        <p>
+            <a href="@Url.RouteUrl("Login")">login</a>
+        </p>
+    </header>
+        
+        <!--INSERT MY VIEW HERE!-->
+    @RenderBody() 
+    <footer>
+        &copy; @DateTime.Now.Year - Me
+    </footer>
+    @RenderSection("Scripts", false)
+    
+</body>
+</html>
